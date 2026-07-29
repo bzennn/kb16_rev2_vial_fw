@@ -9,3 +9,11 @@
 #define COMBO_MUST_PRESS_IN_ORDER
 #define VIAL_COMBO_ENTRIES 12
 /*#define DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE 1280 */
+
+/* Worm-circle color config in VIA custom EEPROM */
+#define VIA_EEPROM_CUSTOM_CONFIG_SIZE 7
+
+/* Idle sleep: 30 minutes */
+#define OLED_TIMEOUT 1800000
+#define RGB_MATRIX_TIMEOUT 1800000
+

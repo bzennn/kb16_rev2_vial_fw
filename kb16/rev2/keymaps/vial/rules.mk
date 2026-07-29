@@ -1,5 +1,6 @@
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
+VIALRGB_ENABLE = yes
 LTO_ENABLE = yes
 
 # Encoder enabled
@@ -15,7 +16,14 @@ TAP_DANCE_ENABLE = yes
 
 QMK_SETTINGS = yes
 
-# eeprom setting
+# Keep USB as HID-only (no virtual Serial/CDC)
+VIRTSER_ENABLE = no
+CONSOLE_ENABLE = no
 
+# Custom Worm-circle RGB effect
+RGB_MATRIX_CUSTOM_USER = yes
+SRC += worm_circle.c
+
+# eeprom setting
 EEPROM_DRIVER = vendor
 

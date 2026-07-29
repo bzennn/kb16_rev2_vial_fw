@@ -17,6 +17,8 @@
 
 #include QMK_KEYBOARD_H
 
+#include "worm_circle.h"
+
 // OLED animation
 #include "lib/layer_status/layer_status.h"
 
@@ -32,7 +34,9 @@ enum layer_names {
     _FN2
 };
 
-// enum layer_keycodes { };
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    return worm_circle_process_record(keycode, record);
+}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -115,10 +119,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
     /*  Row:    0        1        2        3        4        */
     [_FN2] = LAYOUT(
-                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
-                RGB_SAI, RGB_SAD, _______, _______, TO(_BASE),
+                RGB_SPI, RGB_SPD, WC_A,    QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, WC_B,    _______, TO(_BASE),
                 RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
-                _______, RGB_VAI, RGB_HUD, RGB_VAD
+                WC_CEN,  RGB_VAI, RGB_HUD, RGB_VAD
             ),
 };
 

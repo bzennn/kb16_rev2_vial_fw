@@ -2,11 +2,28 @@
     "name": "KB16-01",
     "vendorId": "0xD010",
     "productId": "0x1601",
-    "lighting": "none",
+    "lighting": "vialrgb",
     "matrix": {
         "rows": 4,
         "cols": 5
     },
+    "customKeycodes": [
+        {
+            "name": "WC Contour A",
+            "title": "Worm Circle: next RGB Hue/Sat edits Contour A (same as Lighting color)",
+            "shortName": "WC A"
+        },
+        {
+            "name": "WC Contour B",
+            "title": "Worm Circle: next RGB Hue/Sat edits Contour B",
+            "shortName": "WC B"
+        },
+        {
+            "name": "WC Center",
+            "title": "Worm Circle: next RGB Hue/Sat edits Center 2x2",
+            "shortName": "WC Cen"
+        }
+    ],
     "layouts": {
         "keymap": [
 			["0,0","0,1","0,2","0,3",{"x":0.25},"0,0\n\n\n\n\n\n\n\n\ne","0,1\n\n\n\n\n\n\n\n\ne",{"x":0.25},"1,0\n\n\n\n\n\n\n\n\ne","1,1\n\n\n\n\n\n\n\n\ne"],
